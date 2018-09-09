@@ -1,0 +1,54 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+wt_platform_home:
+    path:      /{page}
+    defaults:
+        _controller: WTPlatformBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+    
+wt_platform_view:
+    path:      /advert
+    defaults:
+        _controller: WTPlatformBundle:Advert:view
+    requirements:
+        id: \d+
+       
+    
+wt_platform_add:
+    path:      /add
+    defaults:
+        _controller: WTPlatformBundle:Advert:add
+
+wt_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: WTPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+wt_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: WTPlatformBundle:Advert:delete
+    requirements:
+        id: \d+
+
+
+wt_platform_tri:
+    path:      /tri
+    defaults:
+        _controller: WTPlatformBundle:Advert:tri
+    requirements:
+                id: \d+
+
+wt_platform_v:
+    path:      /lettre
+    defaults:
+        _controller: WTPlatformBundle:Lettre:v
+    requirements:
+        id: \d+
+
+       
+       

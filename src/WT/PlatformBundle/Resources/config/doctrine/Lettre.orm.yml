@@ -1,0 +1,20 @@
+WT\PlatformBundle\Entity\Lettre:
+    type: entity
+    table: null
+    repositoryClass: WT\PlatformBundle\Repository\LettreRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        age:
+            type: integer
+        contenu:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

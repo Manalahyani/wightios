@@ -1,0 +1,38 @@
+{% extends "WTPlatformBundle::layout.html.twig" %}
+
+
+  {% block wtplatform_body %}
+  
+  {% for advert in advert %}
+  <table class="table-bordered table" style="width:98%">
+  
+  <colgroup>
+  
+
+  <tr>
+  <td style="width:10%">{{ advert.id }} </td>
+  <td style="width:20%"> {{ advert.nom }} </td> 
+  <td style="width:22%">{{ advert.mail }}</td>
+  <td style="width:14%">   {{ advert.num }}</td>
+   <td style="width:10%"> {{ advert.date|date('d/m/Y') }}</td>
+     
+  
+<td style="width:20%">
+  
+    <a href="{{ path('wt_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier 
+    </a>
+    <a href="{{ path('wt_platform_delete', {'id': advert.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer
+    </a></td></tr><colgroup></table>
+
+  </div>
+
+{% endfor %}
+<div><a href="{{ path('wt_platform_add') }}" class="btn btn-primary btn-lg ">
+      <i class="glyphicon glyphicon-add"></i>
+    Ajouter    </a>
+  </div>
+{% endblock %}

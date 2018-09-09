@@ -1,0 +1,4 @@
+wt_platform:
+    resource: "@WTPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+

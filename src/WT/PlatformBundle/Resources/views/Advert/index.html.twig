@@ -1,0 +1,26 @@
+{% extends "WTPlatformBundle::layout.html.twig" %}
+
+{% block nom %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+
+{% block wtplatform_body %}
+
+  <h2>Liste des annonces</h2>
+
+  <ul>
+    {% for advert in listAdverts %}
+      <li>
+        <a href="{{ path('wt_platform_view', {'id': advert.id}) }}">
+          {{ advert.nom }}
+        </a>
+        par {{ advert.mail }},
+        le {{ advert.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

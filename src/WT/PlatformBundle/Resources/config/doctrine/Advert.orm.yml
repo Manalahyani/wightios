@@ -1,0 +1,22 @@
+WT\PlatformBundle\Entity\Advert:
+    type: entity
+    table: null
+    repositoryClass: WT\PlatformBundle\Repository\AdvertRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        mail:
+            type: string
+            length: 255
+        num:
+            type: integer
+        date:
+            type: date
+    lifecycleCallbacks: {  }

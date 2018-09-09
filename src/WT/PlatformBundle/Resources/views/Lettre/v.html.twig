@@ -1,0 +1,25 @@
+{% extends "WTPlatformBundle::layout.html.twig" %}
+
+
+  {% block wtplatform_body %}
+  
+  {% for lettre in lettre %}
+  <table class="table-bordered table" style="width:98%">
+  
+  <colgroup>
+  
+
+  <tr>
+  <td style="width:10%">{{ lettre.id }} </td>
+  <td style="width:20%"> {{ lettre.titre }} </td> 
+  <td style="width:22%">{{ lettre.age }}</td>
+  <td style="width:22%">{{ lettre.contenu }}</td>
+  
+     
+  
+</tr><colgroup></table>
+
+
+{% endfor %}
+
+{% endblock %}

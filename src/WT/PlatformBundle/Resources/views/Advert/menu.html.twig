@@ -1,0 +1,12 @@
+
+
+
+<ul class="nav nav-pills nav-stacked">
+  {% for advert in listAdverts %}
+    <li>
+      <a href="{{ path('wt_platform_view', {'id': advert.id}) }}">
+        {{ advert.nom }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
